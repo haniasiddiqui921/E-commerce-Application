@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./index.css">
+  <!-- <link rel="stylesheet" href="./About.html"> -->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    /* header style */
+    .header {
+      position: fixed;
+      width: 100%;
+      display: flex;
+      box-shadow: 0 3px 10px rgba(19, 19, 19, 0.12);
+      align-items: center;
+      justify-content: space-between;
+      z-index: 2;
+      position: fixed;
+      top: 0;
+
+      /* margin-top: none; */
+
+
+
+
+      background-color: #ffffff;
+      /* border: 1px solid #0a0707; */
+    }
+
+    /* Logo */
+    .logo img {
+      /* height: 40px; */
+      border: none;
+      size: 110px;
+      padding: 10px 48px;
+
+    }
+
+    .icons span {
+      opacity: 0.2;
+    }
+
+    /* Navigation */
+    .nav nav ul {
+      display: flex;
+      gap: 30px;
+      /* border: 2px solid black; */
+      align-content: center;
+      /* padding: 0; */
+      /* margin: o; */
+
+
+    }
+
+    nav ul {
+      margin: 0;
+    }
+
+
+
+    .nav nav li {
+      list-style: none;
+      padding: 20px 13px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #000000;
+      font-size: 17px;
+    }
+
+
+
+    /* Icons */
+    .icons {
+      display: flex;
+      padding: 10px 48px;
+      gap: 20px;
+      font-size: 20px;
+
+    }
+
+    .hamburger {
+      display: none;
+      /* background-color: ; */
+    }
+
+    .header {
+  min-height: 70px;
+}
+
+
+    @media (max-width: 992px) {
+      .hamburger icon {
+        display: block;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .hamburger {
+        display: block;
+        font-size: 26px;
+        position: relative;
+        right: 12px;
+        /* background-color: white;/ */
+      }
+
+      .nav {
+        display: none;
+      }
+
+    }
+
+    /* @media (max-width: 992px) {
+      .icons {
+        position: relative;
+        left: 28%;
+      }
+    } */
+     @media (max-width: 992px) {
+
+  .header {
+    padding: 0 15px;
+  }
+
+  .icons {
+    left: 0;
+    padding-right: 10px;
+  }
+
+  .hamburger {
+    margin-left: 10px;
+  }
+
+}
+
+
+    span {
+      font-size: 13px;
+      padding: 8px 0 8px 20px;
+      /* border-top: 2px solid light rgb(0, 0, 0); */
+      list-style: none;
+    }
+
+    .offcanvas-body ul {
+      padding: 0;
+    }
+
+    .links {
+      font-size: 13px;
+      padding: 8px 0 8px 20px;
+      border-top: 2px solid light gray;
+      list-style: none;
+      text-decoration: none;
+
+    }
+
+    .icom {
+      color: rgb(138, 130, 130);
+      padding: 10px;
+      font-size: 20px;
+    }
+
+
+
+
+
+
+
+
+    #filters{
+    margin-bottom: 20px;
+}
+
+#filters button{
+    padding: 8px 12px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+  </style>
+</head>
+
+<body>
+
+
+
+  <header class="header">
+    <!-- Left: Logo -->
+    <div class="logo">
+      <a href="#"><img src="https://preview.colorlib.com/theme/fashe/images/icons/logo.png" alt="Logo"></a>
+
+    </div>
+
+    <!-- Center: Navigation -->
+    <div class="nav">
+      <nav>
+        <ul>
+          <li style="letter-spacing: 1.5px;"> <a href="./index.html">Home</a></li>
+          <li style="letter-spacing: 1.5px;"><a href="./About.html">About</a></li>
+          <li style="letter-spacing: 1.5px;"><a href="./contact.html">Contact</a></li>
+         
+        </ul>
+      </nav>
+    </div>
+
+
+
+    <!-- Right: Icons -->
+
+    <div class="icons">
+      <a href="#"><img src="https://preview.colorlib.com/theme/fashe/images/icons/icon-header-01.png" alt=""></i></a>
+      <span class="linedivide1">|</span>
+      <a href="#"><img src="https://preview.colorlib.com/theme/fashe/images/icons/icon-header-02.png" alt=""></a>
+
+    </div>
+
+    <div class="hamburger ">
+      <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+        aria-controls="offcanvasTop-lg"><img width="30px" height="30px"
+          src="./assest/home/image/bars-solid-full.svg" alt=""></button>
+
+      <div style="height: 352px;" class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop"
+        aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasTopLabel"><a href="#"><img style="padding-left: 40px;"
+                src="https://preview.colorlib.com/theme/fashe/images/icons/logo.png" alt="Logo"></a>
+            <div>
+
+            </div>
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div style="padding: 0;" class="offcanvas-body">
+          <nav>
+            <ul>
+              <li style="border-top: 2px solid rgb(243, 239, 239);" class="span"><span style="color: gray;;">Free
+                  shipping for standard order over $100</span></li>
+
+              <li style="border-top: 2px solid rgb(243, 239, 239);" class="span"><span
+                  style="color: gray;;">fashe@example.com</span></li>
+              <li style="border: 2px solid  rgb(243, 239, 239); padding-top: 0; padding-bottom: 0;padding-left: 8px;"
+                class="span">
+
+                <a href="#"><i class="fa-brands fa-whatsapp icom"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube icom"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram icom"></i></a>
+                <a href="#"><i class="fa-brands fa-snapchat icom"></i></a>
+
+              </li>
+              <li style="background-color: rgb(245, 92, 72) ;font-size: 16px;" class="links"><a
+                  style="text-decoration: none; color: rgb(252, 252, 252);" href="./index.html">Home </a></li>
+              <li style="background-color: rgb(245, 92, 72) ;font-size: 16px;" class="links"><a
+                  style="text-decoration: none; color: rgb(252, 252, 252);" href="./About.html">About </a></li>
+              <li style="background-color: rgb(245, 92, 72) ;font-size: 16px;" class="links"><a
+                  style="text-decoration: none; color: rgb(252, 252, 252);" href="./contact.html">Contact </a></li>
+            <li style=" background-color: rgb(245, 92, 72); font-size: 16px;" class="links"><a
+                      style="text-decoration: none; color: rgb(255, 255, 255); href="">Shop</a></li>
+            
+            
+          </ul>
+          </nav>
+         
+        </div>
+      </div>
+    </div>
+
+   
+  </header>
+  <!-- carousel -->
+
+  <div class=" container-fluid carousel1">
+                      <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                        <div class="carousel-item active caruimg1">
+                           
+                               
+                            <div class="textcaru1">
+                              <span >Women Collection 2018</span>
+                              <h2>NEW ARRIVALS</h2>
+                              <div>
+                                <button><a href="#">SHOP NOW</a></button>
+                              </div>
+                            </div>
+
+
+                        </div>
+                        <div class="carousel-item caruimg2">
+
+                             <div class="textcaru2">
+                              <span >Women Collection 2018</span>
+                              <h2>NEW ARRIVALS</h2>
+                              <div>
+                                <button><a href="#">SHOP NOW</a></button>
+                              </div>
+                              
+                            </div>
+
+                        </div>
+                        <div class="carousel-item caruimg3">
+
+                              <div class="textcaru3">
+                              <span >Women Collection 2018</span>
+                              <h2>NEW ARRIVALS</h2>
+                              <div>
+                                <button><a href="#">SHOP NOW</a></button>
+                              </div>
+                             
+                            </div>
+
+                        </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                          data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                          data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+        </div>
+
+
+
+
+
+
+        <!-- card  -->
+
+          <section id="card section">
+        <h1 id="heading">All Products</h1>
+         <div id="filters">
+        <button onclick="filterProducts('all')">All</button>
+        <button onclick="filterProducts(`women's clothing`)">Women</button>
+        <button onclick="filterProducts(`men's clothing`)">Men</button>
+        <button onclick="filterProducts('jewelery')">Jewelery</button>
+        <button onclick="filterProducts('electronics')">Electronics</button>
+    </div>
+        <div id="all-products">
+        
+        </div>
+    </section>
+<!-- 
+
+        <section class="container-fluid cardsection" >
+          <div class="parrent">
+
+            <div class="cart ">
+              <img src="https://preview.colorlib.com/theme/fashe/images/banner-02.jpg" alt="">
+              <div class="btn-overlay">DRESSES</div>
+            </div>
+
+            <div class="cart small">
+              <img src="https://preview.colorlib.com/theme/fashe/images/banner-03.jpg" alt="">
+              <div class="btn-overlay">WATCHES</div>
+            </div>
+
+            <div class="cart ">
+              <img src="https://preview.colorlib.com/theme/fashe/images/banner-04.jpg" alt="">
+              <div class="btn-overlay">BAGS</div>
+            </div>
+
+            <div class="cart small">
+              <img src="https://preview.colorlib.com/theme/fashe/images/banner-05.jpg" alt="">
+              <div class="btn-overlay">SUNGLASSES</div>
+            </div>
+
+            <div style=" transform: translateY(-136px);" class="cart large ">
+              <img src="https://preview.colorlib.com/theme/fashe/images/banner-07.jpg" alt="">
+              <div class="btn-overlay">FOOTERWEAR</div>
+            </div>
+
+            <div class="cart signup small">
+              <div id="text">
+                <h4>Sign up & get <br> 20% off</h4>
+                <p>Be the first to know about the <br> latest fashion news and exclu- <br>
+                  sive offers.</p>
+                <button style="background-color: black; "><a
+                    style="text-decoration: none;color: white;padding: 5px 20px;border-radius: 21; " href="#">SIGN
+                    UP</a></button>
+              </div>
+            </div>
+
+
+          </div>
+        </section> -->
+
+        <!-- second carouser -->
+
+<!-- 
+        <section class="container my-5 position-relative">
+
+  <!-- LEFT BUTTON -->
+  <!-- <a href="#slide1" class="btn btn-dark position-absolute top-50 start-0 translate-middle-y z-3">
+    ‹
+  </a>
+
+  <!-- RIGHT BUTTON -->
+  <!-- <a href="#slide2" class="btn btn-dark position-absolute top-50 end-0 translate-middle-y z-3"> -->
+    <!-- › -->
+  <!-- </a> --> 
+
+  <!-- <div class="scroll-wrapper d-flex overflow-hidden " > -->
+
+    <!-- SLIDE 1 -->
+    <!-- <div id="slide1" class="d-flex flex-shrink-0 w-100 snap  gap-4 px-3">
+      <img class="w-25" src="https://preview.colorlib.com/theme/fashe/images/item-02.jpg">
+      
+      <img class="w-25" src="https://preview.colorlib.com/theme/fashe/images/item-03.jpg">
+      <img class="w-25" src="https://preview.colorlib.com/theme/fashe/images/item-05.jpg">
+      <img class="w-25" src="https://preview.colorlib.com/theme/fashe/images/item-07.jpg">
+    </div> -->
+
+    <!-- SLIDE 2 -->
+    <!-- <div id="slide2" class="d-flex flex-shrink-0 w-100 snap gap-4 px-3">
+     <img class="w-25" src="https://preview.colorlib.com/theme/fashe/images/item-02.jpg">
+      <img class="w-25" src="https://preview.colorlib.com/theme/fashe/images/item-03.jpg">
+      <img class="w-25" src="https://preview.colorlib.com/theme/fashe/images/item-05.jpg">
+      <img class="w-25" src="https://preview.colorlib.com/theme/fashe/images/item-07.jpg">
+    </div> -->
+
+  <!-- </div>
+</section> --> 
+
+
+
+
+        <!-- card 2 -->
+
+
+        <section>
+          <div class="parrent-2">
+            <div class="child">
+              <img src="https://preview.colorlib.com/theme/fashe/images/banner-08.jpg" alt="">
+              <div class="overlay-text">
+                <span>The Beauty</span>
+                <h1>LOOKBOOK</h1>
+                <a href="#">VIEW COLLECTION</a>
+              </div>
+            </div>
+            <div class="child">
+              <img src="https://preview.colorlib.com/theme/fashe/images/shop-item-09.jpg" alt="">
+              <div class="overlay">
+                <h5><a href="#">Gafas sol Hawkers one</a></h5>
+
+                <div class="price">
+                  <span class="old">$29.50</span>
+                  <span class="new">$15.90</span>
+                </div>
+
+                <div class="timer">
+                  <div class="time-box">
+                    <span class="number">69</span>
+                    <span class="label">days</span>
+                  </div>
+                  <div class="time-box">
+                    <span class="number">12</span>
+                    <span class="label hour">hrs</span>
+                  </div>
+                  <div class="time-box">
+                    <span class="number">58</span>
+                    <span class="label">mins</span>
+                  </div>
+                  <div class="time-box">
+                    <span class="number">49</span>
+                    <span class="label">secs</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- blog section -->
+
+        <section class="blogsection">
+          <div class="blogheading">
+            <h3>OUR BLOG</h3>
+          </div>
+          <div class="parrentblog">
+
+            <div class="childblog">
+
+              <img class="blog" src="https://preview.colorlib.com/theme/fashe/images/blog-01.jpg" alt="">
+              <br>
+              <br>
+              <div class="blogtext">
+                <h4><a href="#">Black Friday Guide: Best Sales & Discount <br> Codes</a></h4>
+                <span>By Nancy Ward on July 22, 2017</span>
+                <p>Duis ut velit gravida nibh bibendum commodo. Sus- <br>pendisse pellentesque mattis augue id euismod.
+                  Inter- <br>dum et malesuada fames</p>
+              </div>
+            </div>
+
+            <div class="childblog">
+              <img src="https://preview.colorlib.com/theme/fashe/images/blog-02.jpg" alt="">
+              <br>
+              <br>
+              <div class="blogtext">
+                <h4><a href="#">The White Sneakers Nearly Every Fashion Girls Own</a></h4>
+                <span>By Nancy Ward on July 18, 2017</span>
+                <p>Nullam scelerisque, lacus sed consequat laoreet, dui <br> enim iaculis leo, eu viverra ex nulla in
+                  tellus. Nullam nec <br>
+                  ornare tellus, ac fringilla lacus. Ut sit ame</p>
+              </div>
+            </div>
+
+            <div class="childblog">
+              <img src="https://preview.colorlib.com/theme/fashe/images/blog-03.jpg" alt="">
+              <br>
+              <br>
+              <div class="blogtext">
+                <h4><a href="#">New York SS 2018 Street Style: Annina Mislin</a></h4>
+                <span>By Nancy Ward on July 2, 2017</span>
+                <p>Proin nec vehicula lorem, a efficitur ex. Nam vehicula <br> nulla vel erat tincidunt, sed hendrerit
+                  ligula
+                  porttitor. <br> Fusce sit amet maximus nunc
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- instagram post -->
+
+
+        <section class="insta-post container-fluid">
+          <div class="postheading">
+            <h3> @ follow us on Instagram</h3>
+          </div>
+          <div class="instaparrent">
+            <div class="instachild">
+              <a href="#"><img src="https://preview.colorlib.com/theme/fashe/images/gallery-03.jpg" alt=""></a>
+              <a href="#">
+                <div class="contant">
+                <i class="fa-regular fa-heart"></i>
+                <span>39</span>
+                <p>
+                  " Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus.
+                     Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit. "
+                </p>
+                 <span id="conspan"> Photo by @nancyward </span>
+              </div>
+            </a>
+            </div>
+
+
+            <div class="instachild">
+              <a href="#"><img src="https://preview.colorlib.com/theme/fashe/images/gallery-07.jpg" alt=""></a>
+              <a href="#">
+                <div class="contant">
+                <i class="fa-regular fa-heart"></i>
+                <span>39</span>
+                <p>
+                  " Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus.
+                     Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit. "
+                </p>
+                 <span id="conspan"> Photo by @nancyward </span>
+              </div>
+            </a>
+            </div>
+            
+
+            <div class="instachild">
+              <a href="#"><img src="https://preview.colorlib.com/theme/fashe/images/gallery-09.jpg" alt=""></a>
+              <a href="#">
+                <div class="contant">
+                <i class="fa-regular fa-heart"></i>
+                <span>39</span>
+                <p>
+                  " Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus.
+                     Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit. "
+                </p>
+                 <span id="conspan"> Photo by @nancyward </span>
+              </div>
+            </a>
+            </div>
+
+
+            <div class="instachild">
+              <a href="#"><img src="https://preview.colorlib.com/theme/fashe/images/gallery-13.jpg" alt=""></a>
+              <a href="#">
+                <div class="contant">
+                <i class="fa-regular fa-heart"></i>
+                <span>39</span>
+                <p>
+                  " Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus.
+                     Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit. "
+                </p>
+                 <span id="conspan"> Photo by @nancyward </span>
+              </div>
+            </a>
+            </div>
+
+
+            <div class="instachild">
+              <a href="#"><img src="https://preview.colorlib.com/theme/fashe/images/gallery-15.jpg" alt=""></a>
+              <a href="#">
+                <div class="contant">
+                <i class="fa-regular fa-heart"></i>
+                <span>39</span>
+                <p>
+                  " Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus.
+                     Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit. "
+                </p>
+                 <span id="conspan"> Photo by @nancyward </span>
+              </div>
+            </a>
+            </div>
+          </div>
+        </section>
+
+
+
+        <!-- second last section -->
+    <section class="textsection">
+      <div  class="slparrent">
+      <div class="slchild">
+          <h4>Free Delivery Worldwide</h4>
+           <a href="#"><em>Click here for more info</em></a>
+        </div>
+          
+
+        <div class="slchild">
+          <h4>30 Days Return</h4>
+          <span><em>Simply return it within 30 days for an exchange.</em></span>
+        </div>
+
+
+        <div class="slchild  div3">
+          <h4>Store Opening</h4>
+          <span><em>Shop open from Monday to Sunday</em></span>
+        </div>
+    </div>
+    </section>    
+    
+      
+         
+      
+        
+
+
+
+
+
+     <!-- FOOTER -->
+    <footer class="fashe-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>GET IN TOUCH</h4>
+                <p>
+                    Any questions? Let us know in store at 8th floor,
+                    379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+                </p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>CATEGORIES</h4>
+                <ul>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Dresses</a></li>
+                    <li><a href="#">Sunglasses</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>LINKS</h4>
+                <ul>
+                    <li><a href="#">Search</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>HELP</h4>
+                <ul>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>NEWSLETTER</h4>
+                <form class="footer-form">
+                    <input type="email" placeholder="email@example.com">
+                    <button type="submit">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- PAYMENT ICONS -->
+        <div class="card-icons">
+            <a href="#"><img src="https://preview.colorlib.com/theme/fashe/images/icons/visa.png" alt="PayPal"></a>
+            <a href="#"><img src="https://preview.colorlib.com/theme/fashe/images/icons/visa.png" alt="Visa"></a>
+            <a href="#"><img src="https://preview.colorlib.com/theme/fashe/images/icons/mastercard.png" alt="Mastercard"></a>
+            <a href="#"><img src="https://preview.colorlib.com/theme/fashe/images/icons/express.png" alt="Express"></a>
+            <a href="#"><img src="https://preview.colorlib.com/theme/fashe/images/icons/discover.png" alt="Discover"></a>
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="footer-bottom">
+            <p>Copyright © 2025 All rights reserved</p>
+        </div>
+    </footer>
+
+    
+        
+        <script src="./script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+       
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+</body>
+
+</html>

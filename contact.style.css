@@ -1,0 +1,495 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    /* header style */
+    .header {
+      position: fixed;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 2;
+      position: fixed;
+      top: 0;
+
+      /* margin-top: none; */
+
+
+
+
+      background-color: #ffffff;
+      /* border: 1px solid #0a0707; */
+    }
+
+    /* Logo */
+    .logo img {
+      /* height: 40px; */
+      size: 110px;
+      padding: 10px 48px;
+
+    }
+
+    .icons span {
+      opacity: 0.2;
+    }
+
+    /* Navigation */
+    .nav nav ul {
+      display: flex;
+      gap: 30px;
+      /* border: 2px solid black; */
+      align-content: center;
+      /* padding: 0; */
+      /* margin: o; */
+
+
+    }
+
+    nav ul {
+      margin: 0;
+    }
+
+
+
+    .nav nav li {
+      list-style: none;
+      padding: 20px 13px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #000000;
+      font-size: 17px;
+    }
+
+
+
+    /* Icons */
+    .icons {
+      display: flex;
+      padding: 10px 48px;
+      gap: 20px;
+      font-size: 20px;
+
+    }
+
+    .hamburger {
+      display: none;
+      /* background-color: ; */
+    }
+
+    @media (max-width: 992px) {
+      .hamburger icon {
+        display: block;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .hamburger {
+        display: block;
+        font-size: 26px;
+        position: relative;
+        right: 12px;
+        /* background-color: white;/ */
+      }
+
+      .nav {
+        display: none;
+      }
+
+    }
+
+    @media (max-width: 992px) {
+      .icons {
+        position: relative;
+        left: 28%;
+      }
+    }
+
+    @media (max-width: 575px) {
+  
+  /* Hamburger show on mobile */
+  .hamburger {
+    display: block;
+    font-size: 26px;
+    position: relative;
+    right: 12px;
+    cursor: pointer;
+  }
+}
+
+    span{
+  font-size: 13px;
+  padding: 8px 0 8px 20px;
+  /* border-top: 2px solid light rgb(0, 0, 0); */
+  list-style: none;
+}
+
+.offcanvas-body ul {
+  padding: 0;
+}
+
+.links{
+   font-size: 13px;
+  padding: 8px 0 8px 20px;
+  border-top: 2px solid light gray;
+  list-style: none;
+  text-decoration: none;
+ 
+}
+.icom{
+  color: rgb(138, 130, 130);
+  padding: 10px;
+  font-size: 20px;
+}
+/* ======================
+   MOBILE VIEW ≤575px
+====================== */
+@media (max-width: 575px) {
+
+  /* Hamburger visible on mobile */
+  .hamburger {
+    display: block;
+    font-size: 26px;
+    position: relative;
+    right: 12px;
+    cursor: pointer;
+  }
+
+  /* Hide nav menu on mobile */
+  .nav {
+    display: none;
+  }
+
+  /* Icons adjust */
+  .icons {
+    position: relative;
+    left: 0;
+    gap: 15px;
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  /* Logo adjust */
+  .logo img {
+    max-width: 90px;
+    padding: 8px 20px;
+  }
+
+  /* Nav li padding smaller */
+  .nav nav li {
+    padding: 15px 10px;
+  }
+
+  /* Nav link font size smaller */
+  .nav a {
+    font-size: 15px;
+  }
+
+  /* Span inside mobile menu */
+  span {
+    font-size: 12px;
+    padding: 6px 0 6px 15px;
+  }
+}
+
+
+
+/* =================
+   HERO
+================= */
+.contact-hero {
+    background-image: url("https://preview.colorlib.com/theme/fashe/images/heading-pages-06.jpg");
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-hero h1 {
+    color: #fff;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+/* =================
+   MAIN AREA
+================= */
+.contact-area {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 40px;
+}
+
+/* MAP */
+.map-box {
+    flex: 1;
+}
+.map-box iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+
+/* FORM */
+.form-box {
+    flex: 1;
+}
+.form-box h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+.form-box input,
+.form-box textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #e6e6e6;
+    font-size: 14px;
+}
+.form-box textarea {
+    height: 150px;
+    resize: none;
+}
+.form-box button {
+    background: #111;
+    color: #fff;
+    padding: 12px 35px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 25px;
+}
+.form-box button:hover {
+    background: #e65540;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .contact-area {
+        flex-direction: column;
+    }
+    .map-box iframe {
+        height: 350px;
+    }
+}
+@media (max-width: 576px) {
+    .contact-hero h1 {
+        font-size: 26px;
+    }
+}
+
+
+/* BODY BACKGROUND */
+body {
+    background-color: #ffffff; /* Page ka background white */
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* full screen height */
+    display: flex;
+    flex-direction: column;
+}
+
+.fashe-footer {
+    margin-top: auto; /* push footer to bottom */
+}
+
+
+/* FOOTER MAIN */
+.fashe-footer {
+    background-color: #f2f2f2; /* Footer light grey */
+    padding: 80px 0 30px;
+    font-family: Arial, sans-serif;
+}
+
+/* FOOTER CONTAINER */
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+}
+
+/* FOOTER COLUMN */
+.footer-col {
+    padding-top: 25px; /* Headings ko niche laane ke liye */
+}
+
+/* HEADINGS */
+.footer-col h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* PARAGRAPHS */
+.footer-col p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* LISTS */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    font-size: 13px;
+    color: #666;
+    text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+    color: #000;
+}
+
+/* SOCIAL ICONS */
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social a {
+    color: #666;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.footer-social a:hover {
+    color: #000;
+}
+
+/* NEWSLETTER */
+.footer-form input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 8px 0;
+    background: transparent;
+    margin-bottom: 15px;
+    font-size: 13px;
+    outline: none;
+}
+
+.footer-form button {
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* CARD ICONS */
+.card-icons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.card-icons img {
+    height: 22px;
+    margin: 0 6px;
+}
+
+/* FOOTER BOTTOM TEXT */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #888;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .footer-col h4 {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .footer-col p,
+    .footer-col ul li a {
+        font-size: 12.5px;
+        line-height: 1.7;
+    }
+
+    .footer-form button {
+        padding: 10px 28px;
+        font-size: 12.5px;
+    }
+}
+
+@media (max-width: 575px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-col h4 {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .footer-col p,
+    .footer-col ul li a {
+        font-size: 12.5px;
+        line-height: 1.7;
+    }
+
+    .footer-form input {
+        font-size: 12.5px;
+        margin-bottom: 18px;
+    }
+
+    .footer-form button {
+        width: auto;
+        padding: 10px 30px;
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
+        font-size: 12px;
+    }
+
+    .card-icons {
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+/* Ensure footer sticks to bottom */
+body {
+    min-height: 100vh; /* full screen height */
+    display: flex;
+    flex-direction: column;
+}
+
+.fashe-footer {
+    margin-top: auto; /* push footer to bottom */
+}
