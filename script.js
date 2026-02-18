@@ -41,7 +41,7 @@ function goToDetailPage(productId) {
  // Product ID save
   localStorage.setItem("productId", productId);
 
-    window.location.href = `productDetailPage.html?id=${productId}`;
+    window.location.href = `productdetailpage.html?id=${productId}`;
   // Extra cheez (optional – sirf samajhne ke liye)
 //   localStorage.setItem("productId2", "Hello");
 //   localStorage.setItem("username", "Ali");
